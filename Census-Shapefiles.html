@@ -67,30 +67,26 @@ img {
 </div>
 
 
-<p>Decription: Geographic Boundaries for Census data Files: Census Tract Shapefile, Census Unified School Zoning Shapefile Source: Census</p>
+
+<p><strong>Description:</strong> Geographic Boundaries for Census data</p>
+
+<p><strong>Sources:</strong> U.S. Census<br/>
+<a href="ftp://ftp2.census.gov//geo/tiger/TIGER2015/TRACT/tl_2015_37_tract.zip">Census Tract Shapefile</a><br/>
+<a href="ftp://ftp2.census.gov//geo/tiger/TIGER2015/UNSD/tl_2015_37_unsd.zip">Census Unified School Zoning Shapefile</a>  </p>
+
+<p>Download the .ZIP files and extract them.  </p>
+
 <div id="load-packages" class="section level2">
 <h2>Load packages</h2>
 <pre class="r"><code>library(sp)</code></pre>
 <pre><code>## Warning: package 'sp' was built under R version 3.2.2</code></pre>
 <pre class="r"><code>library(rgdal)</code></pre>
 <pre><code>## Warning: package 'rgdal' was built under R version 3.2.2</code></pre>
-<pre><code>## rgdal: version: 1.0-7, (SVN revision 559)
-##  Geospatial Data Abstraction Library extensions to R successfully loaded
-##  Loaded GDAL runtime: GDAL 1.11.2, released 2015/02/10
-##  Path to GDAL shared files: C:/Users/Lucia/Documents/R/win-library/3.2/rgdal/gdal
-##  GDAL does not use iconv for recoding strings.
-##  Loaded PROJ.4 runtime: Rel. 4.9.1, 04 March 2015, [PJ_VERSION: 491]
-##  Path to PROJ.4 shared files: C:/Users/Lucia/Documents/R/win-library/3.2/rgdal/proj
-##  Linking to sp version: 1.2-1</code></pre>
 <pre class="r"><code>library(geosphere)</code></pre>
 <pre><code>## Warning: package 'geosphere' was built under R version 3.2.2</code></pre>
 <pre class="r"><code>library(rgeos)</code></pre>
 <pre><code>## Warning: package 'rgeos' was built under R version 3.2.2</code></pre>
-<pre><code>## rgeos version: 0.3-14, (SVN revision 511)
-##  GEOS runtime version: 3.4.2-CAPI-1.8.2 r3921 
-##  Linking to sp version: 1.2-1 
-##  Polygon checking: TRUE</code></pre>
-<pre class="r"><code>library(maptools)</code></pre>
+pre class="r"><code>library(maptools)</code></pre>
 <pre><code>## Warning: package 'maptools' was built under R version 3.2.2</code></pre>
 <pre><code>## Checking rgeos availability: TRUE</code></pre>
 </div>
@@ -155,6 +151,23 @@ ogrListLayers(shpfile.schoolzone)</code></pre>
 </div>
 </div>
 
+<p>Note that the school districts in North Carolina are surprisingly big in the Census data.  </p>
+
+<h1>Schools and School Districts for Durham, Johnston, Orange, and Wake county</h1>
+
+<p>Some counties have their own open data portal that contains schools and/or school districts.  </p>
+
+<p><a href="https://opendurham.nc.gov/explore/dataset/public-schools/?tab=export">Durham</a><br/>
+This is a page where you can download the locations of Durham public schools (not the school districts) in many formats.</p>
+
+<p><a href="http://www.johnstonnc.com/gis2/content.cfm?PD=data">Johnston</a><br/>
+This is Johnston Countys GIS page, if you scroll down to &ldquo;Schools and School District&rdquo; you can download the shapefiles.</p>
+
+<p><a href="http://server2.co.orange.nc.us/OrangeNCGIS/default.aspx">Orange</a><br/>
+This is an interactive map of Orange County where you can highlight the schools (could not find a link to download the file).</p>
+
+<p><a href="http://www.wakegov.com/gis/services/Pages/data.aspx">Wake</a><br/>
+If you scroll down to &ldquo;Miscellaneous&rdquo; there is a file called <code>Wake_Schools_year_mo.zip</code>.</p>
 
 </div>
 
